@@ -64,7 +64,7 @@ namespace TextCarnivalV2.Source.Server
                 return ips[0];
 
             //Show possible ips
-            Console.WriteLine("What Ip will you host on?");
+            Console.WriteLine("What IP will you host on?");
             for (int i = 0; i < ips.Count; i++)
                 Console.WriteLine("[{0}] : {1}", i+1, ips[i]);
 
@@ -76,7 +76,7 @@ namespace TextCarnivalV2.Source.Server
 
                 if (index < 1 || index > ips.Count)
                 {
-                    Console.WriteLine("Not a ip");
+                    Console.WriteLine("Not an IP");
                     continue;
                 }
                 return ips[index-1];
@@ -178,6 +178,12 @@ namespace TextCarnivalV2.Source.Server
             return true;
         }
 
+        //Clears console Screen, not server
+        public void Clear()
+        {
+            send("cler");
+        }
+
         //Runs the server
         public void runClient()
         {
@@ -205,6 +211,7 @@ namespace TextCarnivalV2.Source.Server
 
             while (true)
             {
+                Clear();
                 loadGames();
                 
                 writeData("===================================================================");
@@ -225,6 +232,8 @@ namespace TextCarnivalV2.Source.Server
                 if (index < 1 || index > allGames.Length)
                 {
                     writeData("Thats not a game, bud");
+                    Thread.Sleep(1500);
+                    Clear();
                     continue;
                 }
 
