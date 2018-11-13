@@ -13,7 +13,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         String word1 = "";
         String letters = "";
         int words = 1;
-        String[] phrases = new String[] { "the big gay", "switch", "nofriendo", "no u", "tank zos", "dulan claymold", "car crash compilation", "jason", "the xylophone experience", "logan paul", "jake paul", "deji", "awkward dwarves", "mystical pixel", "pajama party", "ivory tower", "klu klux krab"};
+        String[] phrases = new String[] { "the big gay", "switch", "nofriendo", "no u", "tank zos", "dulan claymold", "car crash compilation", "jason", "the xylophone experience", "logan paul", "jake paul", "deji", "awkward dwarves", "mystical pixel", "pajama party", "ivory tower", "klu klux krab", "el chapo", "suck your mom", "voice over pete", "three wacky numbers", "run hide fight", "jeremy", "geiger", "scott", "lisa", "tister manczos", "rad dad redemption"};
         Random rnd = new Random();
 
         public Hangman() : base()
